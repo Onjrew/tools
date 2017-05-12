@@ -25,13 +25,14 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("01ce486c3a7c8b37cf13f8c95ca4bb3c11413228b35676025fdf239e77019ea1" default))))
+    ("01ce486c3a7c8b37cf13f8c95ca4bb3c11413228b35676025fdf239e77019ea1" default)))
+ '(package-selected-packages (quote (auto-highlight-symbol reykjavik-theme))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(show-paren-match ((t (:background "alternateSelectedControlColor")))))
 (load-theme 'reykjavik)
 
 ;; Set the window size
@@ -42,3 +43,19 @@
 
 ;; Highlight the current line
 (global-hl-line-mode t)
+
+;; Highlight matching parentheses
+(show-paren-mode t)
+
+;; Highlight symbol under the pointer
+(require 'auto-highlight-symbol)
+(global-auto-highlight-symbol-mode t)
+
+;; Set indent level to 2 spaces for JavaScript
+(setq js-indent-level 2)
+
+;; Spaces instead of tabs
+(setq-default indent-tabs-mode nil)
+
+;; Enable auto-revert-buffer
+(global-auto-revert-mode 1)
