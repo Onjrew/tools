@@ -59,3 +59,6 @@
 
 ;; Enable auto-revert-buffer
 (global-auto-revert-mode 1)
+
+;; Set auto-completion list to sort vertically
+(setq completions-format 'vertical)
